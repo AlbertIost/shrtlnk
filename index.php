@@ -9,11 +9,15 @@
     <title>SHRTLNK</title>
 </head>
 <body>
+    <div class="header">
+        <h1>ShrtLnk</h1>
+        <h2>Укорачиватель ссылок</h2>
+    </div>
     <div class="main">
         <div class="form">
             <form id="cut-form">
-                <input name="link" type="text">
-                <input type="submit">
+                <input class="link" name="link" type="text">
+                <input class="send" type="submit" value="Shrt">
             </form>
         </div>
     </div>
