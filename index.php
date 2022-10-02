@@ -16,7 +16,7 @@
     <div class="main">
         <div class="form">
             <form id="cut-form">
-                <input class="link" name="link" type="text">
+                <input class="link" id="link" name="link" type="text">
                 <input class="send" type="submit" value="Shrt">
             </form>
         </div>
@@ -40,7 +40,7 @@
                     },
                     success: function (data) {
                         // Вывод текста результата отправки
-                        $(formNm).html('<p style="text-align:center">'+data+'</p>');
+                        $('input#link').val(data);
                     },
                     error: function (jqXHR, text, error) {
                     }
