@@ -1,8 +1,6 @@
 <?
+require $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
 
-use Token\Token;
-
-require_once 'Token.php';
 if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) &&
     !empty($_SERVER['HTTP_X_REQUESTED_WITH']) &&
     strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest'){

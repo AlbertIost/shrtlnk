@@ -1,0 +1,15 @@
+{
+    "name": "albertiost/shrtlnk",
+    "autoload": {
+        "psr-4": {
+            "": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "Albert Iost",
+            "email": "albertiost@mail.ru"
+        }
+    ],
+    "require": {}
+}

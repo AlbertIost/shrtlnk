@@ -1,8 +1,6 @@
 <?php
 
-namespace Token;
-require_once '../hashids/HashGenerator.php';
-require_once '../hashids/Hashids.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
 
 class Token
 {
