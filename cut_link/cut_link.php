@@ -1,4 +1,7 @@
 <?
+
+use Token\Token;
+
 require_once 'Token.php';
 if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) &&
     !empty($_SERVER['HTTP_X_REQUESTED_WITH']) &&
@@ -6,14 +9,14 @@ if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) &&
     $link = $_POST["link"];
 
     try{
-        $db = new PDO('mysql:host=localhost;dbname=short_link_database', 'root', '');
+        $conn = new PDO('mysql:host=localhost;dbname=short_link_database', 'root', '');
     }
     catch (PDOException $e){
         echo "Error! " . $e->getMessage();
         die();
     }
 
-    $token = Token::GetToken($db, $link);
+    $token = Token::GetToken($conn, $link);
     $domainName = $_SERVER['HTTP_HOST'];
     $scheme = $_SERVER['REQUEST_SCHEME'] . '://';
     echo $scheme . $domainName . '/' . $token;
