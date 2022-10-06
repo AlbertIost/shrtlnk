@@ -33,13 +33,16 @@ color2 - #007143
 .main .form form{
     display: flex;
 }
-.main .form .send{
+.main .form .btn{
     background: #FF9340;
     border-width: 0;
     color: #fff;
     font-size: 24px;
     margin-left: 10px;
-    padding: 0 20px;
+    width: 100px;
+}
+.main .form .btn.hidden{
+    display: none;
 }
 .main .form .link{
     font-size: 22px;

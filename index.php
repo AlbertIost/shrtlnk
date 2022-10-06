@@ -17,7 +17,8 @@
         <div class="form">
             <form id="cut-form">
                 <input class="link" id="link" name="link" type="text">
-                <input class="send" type="submit" value="Shrt">
+                <input class="btn " id="send" type="submit" value="Shrt">
+                <input class="btn hidden" id="copy" type="button" value="✂">
             </form>
         </div>
     </div>
@@ -39,13 +40,17 @@
                     beforeSend: function () {
                     },
                     success: function (data) {
-                        // Вывод текста результата отправки
                         $('input#link').val(data);
+                        $('input.btn').toggleClass('hidden');
                     },
                     error: function (jqXHR, text, error) {
                     }
                 });
                 return false;
+            });
+            $('input#copy').click(function () {
+                $('input#link').select();
+                document.execCommand("copy");
             });
         });
     </script>
